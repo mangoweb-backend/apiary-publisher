@@ -3,6 +3,8 @@
 [![Downloads this Month](https://img.shields.io/packagist/dm/mangoweb/apiary-publisher.svg)](https://packagist.org/packages/mangoweb/apiary-publisher)
 [![Stable version](http://img.shields.io/packagist/v/mangoweb/apiary-publisher.svg)](https://packagist.org/packages/mangoweb/apiary-publisher)
 
+Apiary Publisher provides a simple CLI and PHP interface for publishing [API Blueprints](https://apiblueprint.org/) to [Apiary](https://apiary.io/).
+
 
 ## Installation
 
