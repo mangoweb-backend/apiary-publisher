@@ -1,0 +1,9 @@
+{
+	"name": "mangoweb/apiary-publisher",
+	"description": "CLI and PHP interface for publishing Apiary Blueprints",
+	"license": "MIT",
+	"bin": ["bin/apiary-publish"],
+	"autoload": {
+		"psr-4": { "Mangoweb\\ApiaryPublisher\\": "src/" }
+	}
+}

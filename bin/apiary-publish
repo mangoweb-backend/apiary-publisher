@@ -1,0 +1,28 @@
+#!/usr/bin/env php
+<?php
+
+namespace Mangoweb\ApiaryPublisher;
+
+require __DIR__ . '/../src/ApiaryPublisher.php';
+
+
+if ($_SERVER['argc'] !== 4) {
+	fwrite(STDERR, "Usage {$_SERVER['argv'][0]} <apiName> <apiToken> <blueprintPath>\n");
+	fwrite(STDERR, "  Hint for apiName:  docs.<apiName>.apiary.io\n");
+	fwrite(STDERR, "  Hint for apiToken: https://login.apiary.io/tokens\n");
+	exit(1);
+}
+
+$apiName = $_SERVER['argv'][1];
+$apiToken = $_SERVER['argv'][2];
+$path = $_SERVER['argv'][3];
+
+$code = @file_get_contents($path);
+if ($code === FALSE) {
+	$detail = error_get_last()['message'];
+	fwrite(STDERR, "Failed to load file '$path' ($detail)\n");
+	exit(2);
+}
+
+$publisher = new ApiaryPublisher($apiName, $apiToken);
+$publisher->publish($code);
