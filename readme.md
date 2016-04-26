@@ -15,6 +15,20 @@ $ composer require mangoweb/apiary-publisher
 
 ## Usage example
 
+### Symfony Console
+
+Register `Mangoweb\ApiaryPublisher\Bridges\SymfonyConsole\ApiaryPublishCommand` to your Symfony Console application.
+
+```php
+$app = new Symfony\Component\Console\Application();
+$app->add(new Mangoweb\ApiaryPublisher\Bridges\SymfonyConsole\ApiaryPublishCommand);
+```
+
+```bash
+# bin/console apiary:publish --name <apiName> --token <apiToken>                    <blueprintPath>
+$ bin/console apiary:publish --name pollsapi  --token 874887d6ecd0b106a47448c5beca1 blueprint.apib
+```
+
 ### CLI
 
 ```bash

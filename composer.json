@@ -2,6 +2,9 @@
 	"name": "mangoweb/apiary-publisher",
 	"description": "CLI and PHP interface for publishing Apiary Blueprints",
 	"license": "MIT",
+	"require-dev": {
+		"symfony/console": "^3.0"
+	},
 	"bin": ["bin/apiary-publish"],
 	"autoload": {
 		"psr-4": { "Mangoweb\\ApiaryPublisher\\": "src/" }
